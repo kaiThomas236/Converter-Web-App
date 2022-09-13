@@ -17,7 +17,7 @@
 </head>
 
 
-<body data-bs-spy="scroll" data-bs-target=".navbar">
+<body data-bs-spy="scroll" data-bs-target=".navbar"  data-bs-root-margin="0px 0px -40%">
 
 
 
@@ -67,7 +67,7 @@
     <div class="row justify-content-center">
         <div class="column col-md-3">
             <p class="label">From Base</p>
-            <select class="dropdown form-select" aria-label="Default select example">
+            <select class="dropdown form-select mb-4">
                 <option selected>-- select base --</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -82,10 +82,15 @@
                 <option value="11">11</option>
                 <option value="12">12</option>
             </select>
+            <p class="label">Input</p>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="input">
+            </div>
+            <button type="button" class="convert btn btn-lg">Convert!</button>
         </div>
         <div class="column col-md-3">
             <p class="label">To Base</p>
-            <select class="dropdown form-select" aria-label="Default select example">
+            <select class="dropdown form-select mb-4">
                 <option selected>-- select base --</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -100,6 +105,11 @@
                 <option value="11">11</option>
                 <option value="12">12</option>
             </select>
+            <p class="label">Result</p>
+            <div class="input-group mb-4">
+                <output type="text" class="form-control" placeholder="result"><p>result</p></output>
+            </div>
+            <button type="button" class="reset btn btn-lg">Reset</button>
         </div>
        
         

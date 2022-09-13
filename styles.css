@@ -1,25 +1,28 @@
 /******************************THEME DETAILS******************************/
 
-/* #DDFDFF, #5CE1E6 */
+/* #DDFDFF #5CE1E6 #A6A6A6 #212529 */
 
 /******************************TAG SELECTORS******************************/
 
 body {
-    position: relative;
     text-align: center;
+    scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    scroll-behavior: smooth;
 }
 
 h1 {
     font-weight: 400;
     font-size: 5rem;
+    padding-bottom: 50px;
 }
 
 h2 {
     font-weight: 400;
     font-size: 3.5rem;
+    padding-top: 68px; /* keeps content below (not behind) sticky navbar */
+    margin-top: -68px; /* keeps content below (not behind) sticky navbar */
+    padding-bottom: 40px;
 }
 
 h3 {
@@ -31,11 +34,43 @@ li, a {
     font-size: 1.25rem;
 }
 
-section {
-    margin: 0;
-    padding: 20px 0;
+button, .convert {
+    --bs-btn-color: black;
+    --bs-btn-bg: #5CE1E6;
+    --bs-btn-border-color: #5CE1E6;
+    --bs-btn-hover-bg: none;
+    --bs-btn-hover-border-color: #5CE1E6;
+    --bs-btn-active-bg: none;
+    --bs-btn-active-border-color: #5CE1E6;
+    --bs-btn-focus-bg: none;
+    --bs-btn-focus-border-color: #5CE1E6;
+    border-radius: 16px;
 }
 
+button, .reset {
+    --bs-btn-color: black;
+    --bs-btn-bg: #A6A6A6;
+    --bs-btn-border-color: #A6A6A6;
+    --bs-btn-hover-bg: none;
+    --bs-btn-hover-border-color: #A6A6A6;
+    --bs-btn-active-bg: none;
+    --bs-btn-active-border-color: #A6A6A6;
+    --bs-btn-focus-bg: none;
+    --bs-btn-focus-border-color: #A6A6A6;
+    border-radius: 16px;
+}
+
+section {
+    margin: 0;
+    padding-bottom: 136px;
+}
+
+output p {
+    text-align: left;
+    color: #6f6f6f;
+    margin: 0;
+    padding: 0;
+}
 
 footer {
     font-size: 0.8rem;
@@ -59,9 +94,7 @@ footer {
     border-radius: 10px;
 }
 
-.main-title {
-    padding: 225px 0;
-}
+
 
 
 
@@ -88,7 +121,15 @@ footer {
 
 /*******************************ID SELECTORS*******************************/
 
+#home {
+    padding-top: 68px; /* keeps content below (not behind) sticky navbar */
+    margin-top: -68px; /* keeps content below (not behind) sticky navbar */
+    padding: 260px 0;
+}
+
+#footer {
+    padding: 15px;
+}
 
 
 /******************************MEDIA QUERIES******************************/
-
