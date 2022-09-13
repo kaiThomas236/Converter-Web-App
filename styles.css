@@ -1,0 +1,94 @@
+/******************************THEME DETAILS******************************/
+
+/* #DDFDFF, #5CE1E6 */
+
+/******************************TAG SELECTORS******************************/
+
+body {
+    position: relative;
+    text-align: center;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 5rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+li, a {
+    font-size: 1.25rem;
+}
+
+section {
+    margin: 0;
+    padding: 20px 0;
+}
+
+
+footer {
+    font-size: 0.8rem;
+}
+
+/*****************************CLASS SELECTORS*****************************/
+
+.navbar {
+    padding: 0 4px;
+}
+
+.navbar a {
+    padding: 19px 12px;
+    border-radius: 10px; /* by setting the border radius before the a is active or hovered it prevents a flash of square highlighting from appearing */
+}
+
+.navbar li>a:hover,
+.navbar li>a:focus,
+.navbar li>a.active {
+    background-color: #5CE1E6;
+    border-radius: 10px;
+}
+
+.main-title {
+    padding: 225px 0;
+}
+
+
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-color {
+    background-color: #DDFDFF;
+}
+
+.row {
+    margin: 0;
+}
+
+
+
+.label {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+
+
+/*******************************ID SELECTORS*******************************/
+
+
+
+/******************************MEDIA QUERIES******************************/
+
