@@ -63,7 +63,7 @@
 </section>
 
 <section id="base" class="bg-white">
-    <h2>Number Base Conversion</h1>
+    <h2>Number Base Conversion</h2>
     <div class="row justify-content-center">
         <div class="column col-md-3">
             <p class="label">From Base</p>
@@ -117,22 +117,211 @@
 </section>
 
 <section id="temp" class="bg-color">
-    <h2>Temperature Conversion</h1>
+    <h2>Temperature Conversion</h2>
+    <div class="row justify-content-center">
+        <div class="column col-md-3">
+            
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Farenheit" aria-describedby="basic-addon2">
+                <span class="input-group-text" id="basic-addon2">°F</span>
+            </div>
+            <button type="button" class="convert btn btn-lg">Convert!</button>
+        </div>
+        <div class="column col-md-3">
+        
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Celcius" aria-describedby="basic-addon2">
+                <span class="input-group-text" id="basic-addon2">°C</span>
+            </div>
+            <button type="button" class="reset btn btn-lg">Reset</button>
+        </div>
+        
+    </div>
 
 </section>
 
 <section id="mass" class="bg-white">
-    <h2>Mass Conversion</h1>
+    <h2>Mass Conversion</h2>
+    <div class="row justify-content-center">
+        <div class="column col-md-3">
+            <p class="label">From Unit</p>
+            <select class="dropdown form-select mb-4">
+                <option selected>-- select unit --</option>
+                <option value="UK ton">UK ton</option>
+                <option value="US ton">US ton</option>
+                <option value="pound">pound</option>
+                <option value="ounce">ounce</option>
+                <option value="tonne">tonne</option>
+                <option value="kilogram">kilogram</option>
+                <option value="gram">gram</option>
+                <option value="milligram">milligram</option>
+            </select>
+            <p class="label">Input</p>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="input">
+            </div>
+            <button type="button" class="convert btn btn-lg">Convert!</button>
+        </div>
+        <div class="column col-md-3">
+            <p class="label">To Unit</p>
+            <select class="dropdown form-select mb-4">
+                <option selected>-- select unit --</option>
+                <option value="UK ton">UK ton</option>
+                <option value="US ton">US ton</option>
+                <option value="pound">pound</option>
+                <option value="ounce">ounce</option>
+                <option value="tonne">tonne</option>
+                <option value="kilogram">kilogram</option>
+                <option value="gram">gram</option>
+                <option value="milligram">milligram</option>
+            </select>
+            <p class="label">Result</p>
+            <div class="input-group mb-4">
+                <output type="text" class="form-control" placeholder="result">
+                    <p>result</p>
+                </output>
+            </div>
+            <button type="button" class="reset btn btn-lg">Reset</button>
+        </div>
+    </div>
+    <h3>Other Planets</h3>
+    <div class="row justify-content-center">
+        <div class="column col-md-2">
+            <p class="label">Input</p>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control"  placeholder="input">
+            </div>
+            
+        </div>
+        <div class="column col-md-1 px-0">
+            <p class="label">Unit</p>
+            <select id="planet-drop" class="dropdown form-select pe-0">
+                <option selected></option>
+                <option value="UK ton">UK ton</option>
+                <option value="US ton">US ton</option>
+                <option value="pound">lb</option>
+                <option value="ounce">oz</option>
+                <option value="tonne">tonne</option>
+                <option value="kilogram">kg</option>
+                <option value="gram">g</option>
+                <option value="milligram">mg</option>
+            </select>
+        </div>
+        <div class="column col-md-3">
+            <p class="label">On Planet</p>
+            <select class="dropdown form-select mb-4">
+                <option selected>-- select planet --</option>
+                <option value="Mercury">Mercury</option>
+                <option value="Venus">Venus</option>
+                <option value="Earth">Earth</option>
+                <option value="Mars">Mars</option>
+                <option value="Jupiter">Jupiter</option>
+                <option value="Saturn">Saturn</option>
+                <option value="Uranus">Uranus</option>
+                <option value="Neptune">Neptune</option>
+            </select>
+
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="column col-md-3">
+            <p class="label">Result</p>
+            <div class="input-group mb-4">
+                <output type="text" class="form-control" placeholder="result">
+                    <p>result</p>
+                </output>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="column col-md-3">
+            <button type="button" class="convert btn btn-lg">Convert!</button>
+        </div>
+        <div class="column col-md-3">
+            <button type="button" class="reset btn btn-lg">Reset</button>
+        </div>
+    </div>
 
 </section>
 
 <section id="length" class="bg-color">
-    <h2>Length Conversion</h1>
-
+    <h2>Length Conversion</h2>
+    <div class="row justify-content-center">
+        <div class="column col-md-3">
+            <p class="label">From Unit</p>
+            <select class="dropdown form-select mb-4">
+                <option selected>-- select unit --</option>
+                <option value="mile">mile</option>
+                <option value="yard">yard</option>
+                <option value="foot">foot</option>
+                <option value="inch">inch</option>
+                <option value="kilometer">kilometer</option>
+                <option value="meter">meter</option>
+                <option value="centimeter">centimeter</option>
+                <option value="millimeter">millimeter</option>
+            </select>
+            <p class="label">Input</p>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="input">
+            </div>
+            <button type="button" class="convert btn btn-lg">Convert!</button>
+        </div>
+        <div class="column col-md-3">
+            <p class="label">To Unit</p>
+            <select class="dropdown form-select mb-4">
+                <option selected>-- select unit --</option>
+                <option value="mile">mile</option>
+                <option value="yard">yard</option>
+                <option value="foot">foot</option>
+                <option value="inch">inch</option>
+                <option value="kilometer">kilometer</option>
+                <option value="meter">meter</option>
+                <option value="centimeter">centimeter</option>
+                <option value="millimeter">millimeter</option>
+            </select>
+            <p class="label">Result</p>
+            <div class="input-group mb-4">
+                <output type="text" class="form-control" placeholder="result">
+                    <p>result</p>
+                </output>
+            </div>
+            <button type="button" class="reset btn btn-lg">Reset</button>
+        </div>
+    
+    
+    </div>
 </section>
 
 <section id="currency" class="bg-white">
-    <h2>Currency Conversion</h1>
+    <h2>Currency Conversion</h2>
+    <div class="row justify-content-center">
+        <div class="column col-md-3">
+            <p class="label">From Currency</p>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="currency code">
+            </div>
+            <p class="label">Input</p>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="input">
+            </div>
+            <button type="button" class="convert btn btn-lg">Convert!</button>
+        </div>
+        <div class="column col-md-3">
+            <p class="label">To Currency</p>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="currency code">
+            </div>
+            <p class="label">Result</p>
+            <div class="input-group mb-4">
+                <output type="text" class="form-control" placeholder="result">
+                    <p>result</p>
+                </output>
+            </div>
+            <button type="button" class="reset btn btn-lg">Reset</button>
+        </div>
+    
+    
+    </div>
 
 </section>
 

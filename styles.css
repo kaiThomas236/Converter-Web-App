@@ -4,6 +4,12 @@
 
 /******************************TAG SELECTORS******************************/
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+
 body {
     text-align: center;
     scroll-behavior: smooth;
@@ -28,46 +34,50 @@ h2 {
 h3 {
     font-weight: 400;
     font-size: 2rem;
+    margin: 60px auto 30px;
 }
 
 li, a {
     font-size: 1.25rem;
 }
 
-button, .convert {
+button {
+    --bs-btn-hover-bg: none;
+    --bs-btn-active-bg: none;
+    --bs-btn-focus-bg: none;
     --bs-btn-color: black;
+
+    margin: 20px auto;
+}
+
+button, .convert {
     --bs-btn-bg: #5CE1E6;
     --bs-btn-border-color: #5CE1E6;
-    --bs-btn-hover-bg: none;
     --bs-btn-hover-border-color: #5CE1E6;
-    --bs-btn-active-bg: none;
     --bs-btn-active-border-color: #5CE1E6;
-    --bs-btn-focus-bg: none;
     --bs-btn-focus-border-color: #5CE1E6;
     border-radius: 16px;
 }
 
 button, .reset {
-    --bs-btn-color: black;
     --bs-btn-bg: #A6A6A6;
     --bs-btn-border-color: #A6A6A6;
-    --bs-btn-hover-bg: none;
     --bs-btn-hover-border-color: #A6A6A6;
-    --bs-btn-active-bg: none;
     --bs-btn-active-border-color: #A6A6A6;
-    --bs-btn-focus-bg: none;
     --bs-btn-focus-border-color: #A6A6A6;
     border-radius: 16px;
 }
 
+
+
 section {
     margin: 0;
-    padding-bottom: 136px;
+    padding-bottom: 100px;
 }
 
 output p {
     text-align: left;
-    color: #6f6f6f;
+    color: transparent;
     margin: 0;
     padding: 0;
 }
@@ -77,6 +87,8 @@ footer {
 }
 
 /*****************************CLASS SELECTORS*****************************/
+
+
 
 .navbar {
     padding: 0 4px;
@@ -92,6 +104,16 @@ footer {
 .navbar li>a.active {
     background-color: #5CE1E6;
     border-radius: 10px;
+}
+
+#planet-drop {
+    --bs-btn-bg: #A6A6A6;
+    --bs-btn-border-color: #A6A6A6;
+    --bs-btn-hover-border-color: #A6A6A6;
+    --bs-btn-active-border-color: #A6A6A6;
+    --bs-btn-focus-border-color: #A6A6A6;
+    text-align: left;
+    width: 70px !important;
 }
 
 
@@ -110,12 +132,13 @@ footer {
     margin: 0;
 }
 
-
-
 .label {
     text-align: left;
     margin-bottom: 0;
+    padding-top: 10px;
 }
+
+
 
 
 
