@@ -17,7 +17,7 @@
 </head>
 
 
-<body data-bs-spy="scroll" data-bs-target=".navbar"  data-bs-root-margin="0px 0px -40%">
+<body data-bs-spy="scroll" data-bs-target=".navbar">
 
 
 
@@ -120,18 +120,32 @@
     <h2>Temperature Conversion</h2>
     <div class="row justify-content-center">
         <div class="column col-md-3">
-            
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Farenheit" aria-describedby="basic-addon2">
-                <span class="input-group-text" id="basic-addon2">°F</span>
+            <p class="label">From Unit</p>
+            <select class="dropdown form-select mb-4">
+                <option selected>-- select unit --</option>
+                <option value="Farenheit">Farenheit</option>
+                <option value="Celsius">Celsius</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            <p class="label">Input</p>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="input">
             </div>
             <button type="button" class="convert btn btn-lg">Convert!</button>
         </div>
         <div class="column col-md-3">
-        
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Celcius" aria-describedby="basic-addon2">
-                <span class="input-group-text" id="basic-addon2">°C</span>
+            <p class="label">To Unit</p>
+            <select class="dropdown form-select mb-4">
+                <option selected>-- select unit --</option>
+                <option value="Farenheit">Farenheit</option>
+                <option value="Celsius">Celsius</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            <p class="label">Result</p>
+            <div class="input-group mb-4">
+                <output type="text" class="form-control" placeholder="result">
+                    <p>result</p>
+                </output>
             </div>
             <button type="button" class="reset btn btn-lg">Reset</button>
         </div>
