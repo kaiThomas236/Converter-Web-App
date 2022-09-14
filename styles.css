@@ -94,6 +94,14 @@ footer {
     padding: 0 4px;
 }
 
+.navbar-nav {
+    line-height: 0.5rem;
+}
+
+.navbar-toggler {
+    text-align: right;
+}
+
 .navbar a {
     padding: 19px 12px;
     border-radius: 10px; /* by setting the border radius before the a is active or hovered it prevents a flash of square highlighting from appearing */
@@ -158,3 +166,9 @@ footer {
 
 
 /******************************MEDIA QUERIES******************************/
+
+@media screen and (max-width: 991px) {
+    #home {
+        padding: 95px 0;
+    }
+}
