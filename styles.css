@@ -103,7 +103,7 @@ footer {
 }
 
 .navbar a {
-    padding: 19px 12px;
+    padding: 30px 12px;
     border-radius: 10px; /* by setting the border radius before the a is active or hovered it prevents a flash of square highlighting from appearing */
 }
 
@@ -121,7 +121,6 @@ footer {
     --bs-btn-active-border-color: #A6A6A6;
     --bs-btn-focus-border-color: #A6A6A6;
     text-align: left;
-    width: 70px !important;
 }
 
 
@@ -148,6 +147,10 @@ footer {
 
 .input-group-text {
     background-color: white;
+}
+
+.form-control {
+    text-align: left;
 }
 
 

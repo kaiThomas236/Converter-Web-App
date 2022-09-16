@@ -37,7 +37,7 @@
                 <a class="nav-link" href="#base">Base</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#temp">Temperature</a>
+                <a class="nav-link" href="#temperature">Temperature</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#mass">Mass</a>
@@ -82,10 +82,7 @@
                 <option value="11">11</option>
                 <option value="12">12</option>
             </select>
-            <p class="label">Input</p>
-            <div class="input-group mb-4">
-                <input type="text" class="form-control" placeholder="input">
-            </div>
+            
         </div>
         <div class="column col-md-3">
             <p class="label">To Base</p>
@@ -104,13 +101,26 @@
                 <option value="11">11</option>
                 <option value="12">12</option>
             </select>
-            <p class="label">Result</p>
-            <div class="input-group mb-4">
-                <output type="text" class="form-control" placeholder="result"><p>result</p></output>
-            </div>
+           
         </div>
        
         
+    </div>
+    <div class="row justify-content-center">
+        <div class="column col-md-3">
+            <p class="label">Input</p>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="input">
+            </div>
+        </div>
+        <div class="column col-md-3">
+            <p class="label">Result</p>
+            <div class="input-group mb-4">
+                <output type="text" class="form-control" placeholder="result">
+                    <p>result</p>
+                </output>
+            </div>
+        </div>
     </div>
     <div class="row justify-content-center">
         <div class="column col-md-3 col-6">
@@ -122,40 +132,49 @@
     </div>
 </section>
 
-<section id="temp" class="bg-color">
+<section id="temperature" class="bg-color">
     <h2>Temperature Conversion</h2>
     <div class="row justify-content-center">
         <div class="column col-md-3">
             <p class="label">From Unit</p>
             <select class="dropdown form-select mb-4">
                 <option selected>-- select unit --</option>
-                <option value="Farenheit">Farenheit</option>
+                <option value="Fahrenheit">Fahrenheit</option>
                 <option value="Celsius">Celsius</option>
                 <option value="Kelvin">Kelvin</option>
             </select>
-            <p class="label">Input</p>
-            <div class="input-group mb-4">
-                <input type="text" class="form-control" placeholder="input">
-            </div>
+            
             
         </div>
         <div class="column col-md-3">
             <p class="label">To Unit</p>
             <select class="dropdown form-select mb-4">
                 <option selected>-- select unit --</option>
-                <option value="Farenheit">Farenheit</option>
+                <option value="Fahrenheit">Fahrenheit</option>
                 <option value="Celsius">Celsius</option>
                 <option value="Kelvin">Kelvin</option>
             </select>
+            
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="row justify-content-center">
+        <div class="column col-md-3">
+            <p class="label">Input</p>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="input">
+            </div>
+        </div>
+        <div class="column col-md-3">
             <p class="label">Result</p>
             <div class="input-group mb-4">
                 <output type="text" class="form-control" placeholder="result">
                     <p>result</p>
                 </output>
             </div>
-            
         </div>
-        
     </div>
     <div class="row justify-content-center">
         <div class="column col-md-3 col-6">
@@ -184,10 +203,7 @@
                 <option value="gram">gram</option>
                 <option value="milligram">milligram</option>
             </select>
-            <p class="label">Input</p>
-            <div class="input-group mb-4">
-                <input type="text" class="form-control" placeholder="input">
-            </div>
+            
         </div>
         <div class="column col-md-3">
             <p class="label">To Unit</p>
@@ -202,6 +218,17 @@
                 <option value="gram">gram</option>
                 <option value="milligram">milligram</option>
             </select>
+            
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="column col-md-3">
+            <p class="label">Input</p>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="input">
+            </div>
+        </div>
+        <div class="column col-md-3">
             <p class="label">Result</p>
             <div class="input-group mb-4">
                 <output type="text" class="form-control" placeholder="result">
@@ -221,14 +248,14 @@
 
     <h3>Other Planets</h3>
     <div class="row justify-content-center">
-        <div class="column col-md-2 col-9">
+        <div class="column col-md-2 col-8">
             <p class="label">Input</p>
             <div class="input-group mb-4">
                 <input type="text" class="form-control"  placeholder="input">
             </div>
             
         </div>
-        <div class="column col-md-1 col-3 px-0">
+        <div class="column col-md-1 col-4">
             <p class="label">Unit</p>
             <select id="planet-drop" class="dropdown form-select pe-0">
                 <option selected></option>
@@ -242,6 +269,7 @@
                 <option value="milligram">mg</option>
             </select>
         </div>
+    
         <div class="column col-md-3">
             <p class="label">On Planet</p>
             <select class="dropdown form-select mb-4">
@@ -257,6 +285,7 @@
             </select>
 
         </div>
+
     </div>
     <div class="row justify-content-center">
         <div class="column col-md-3">
@@ -295,10 +324,7 @@
                 <option value="centimeter">centimeter</option>
                 <option value="millimeter">millimeter</option>
             </select>
-            <p class="label">Input</p>
-            <div class="input-group mb-4">
-                <input type="text" class="form-control" placeholder="input">
-            </div>
+            
         </div>
         <div class="column col-md-3">
             <p class="label">To Unit</p>
@@ -313,6 +339,19 @@
                 <option value="centimeter">centimeter</option>
                 <option value="millimeter">millimeter</option>
             </select>
+            
+        </div>
+    
+    
+    </div>
+    <div class="row justify-content-center">
+        <div class="column col-md-3">
+            <p class="label">Input</p>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="input">
+            </div>
+        </div>
+        <div class="column col-md-3">
             <p class="label">Result</p>
             <div class="input-group mb-4">
                 <output type="text" class="form-control" placeholder="result">
@@ -320,8 +359,6 @@
                 </output>
             </div>
         </div>
-    
-    
     </div>
     <div class="row justify-content-center">
         <div class="column col-md-3 col-6">
@@ -341,16 +378,26 @@
             <div class="input-group mb-4">
                 <input type="text" class="form-control" placeholder="currency code">
             </div>
-            <p class="label">Input</p>
-            <div class="input-group mb-4">
-                <input type="text" class="form-control" placeholder="input">
-            </div>
+            
         </div>
         <div class="column col-md-3">
             <p class="label">To Currency</p>
             <div class="input-group mb-4">
                 <input type="text" class="form-control" placeholder="currency code">
             </div>
+            
+        </div>
+    
+    
+    </div>
+    <div class="row justify-content-center">
+        <div class="column col-md-3">
+            <p class="label">Input</p>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="input">
+            </div>
+        </div>
+        <div class="column col-md-3">
             <p class="label">Result</p>
             <div class="input-group mb-4">
                 <output type="text" class="form-control" placeholder="result">
@@ -358,8 +405,6 @@
                 </output>
             </div>
         </div>
-    
-    
     </div>
     <div class="row justify-content-center">
         <div class="column col-md-3 col-6">
