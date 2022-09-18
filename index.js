@@ -21,6 +21,7 @@ length.getElementsByClassName("convert")[0].addEventListener("click", () => { ha
 
 
 
+
 function handleTemperature () {
     var unitFrom = temperature.querySelectorAll(".dropdown")[0].value;
     var unitTo = temperature.querySelectorAll(".dropdown")[1].value;
@@ -42,7 +43,7 @@ function handleTemperature () {
     }
     else {
         conversion = unitFrom+"-"+unitTo;
-        temperatureResult.innerHTML = Math.round((tempConversion[conversion]) * 100) / 100;
+        temperatureResult.innerHTML = Math.round((tempConversion[conversion]) * 1000) / 1000;
     }
 }
 
