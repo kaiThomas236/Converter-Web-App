@@ -43,7 +43,7 @@ function handleTemperature () {
     }
     else {
         conversion = unitFrom+"-"+unitTo;
-        temperatureResult.innerHTML = Math.round((tempConversion[conversion]) * 1000) / 1000;
+        temperatureResult.innerHTML = Math.round((conversionFormulas[conversion]) * 1000) / 1000;
     }
 }
 
