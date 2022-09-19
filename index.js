@@ -18,6 +18,7 @@ var currencyResult = currency.querySelectorAll("output")[0];
 //click listeners
 temperature.getElementsByClassName("convert")[0].addEventListener("click", () => { handleTemperature() });
 length.getElementsByClassName("convert")[0].addEventListener("click", () => { handleLength() });
+base.getElementsByClassName("convert")[0].addEventListener("click", () => { handleBase() });
 
 
 
@@ -69,6 +70,27 @@ function handleLength() {
     else {
         conversion = unitFrom + "-" + unitTo;
         lengthResult.innerHTML = Math.round((conversionFormulas[conversion]) * 1000000) / 1000000;
+    }
+}
+
+
+function handleBase() {
+    var baseFrom = base.querySelectorAll(".dropdown")[0].value;
+    var baseTo = base.querySelectorAll(".dropdown")[1].value;
+    var input = base.querySelectorAll("input")[0].value;
+    var dec;
+    
+    if ((baseFrom === "-- select unit --") || (baseTo === "-- select unit --")) {
+        baseResult.innerHTML = "Please select units and try again."
+    }
+    else if (baseFrom === baseTo) {
+        baseResult.innerHTML = input;
+    }
+    else {
+        
+        dec = parseInt(String(input), baseFrom);
+        output = dec.toString(baseTo);
+        baseResult.innerHTML = (output.toUpperCase());
     }
 }
 
