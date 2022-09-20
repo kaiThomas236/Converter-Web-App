@@ -3,6 +3,7 @@
 var base = document.getElementById("base");
 var temperature = document.getElementById("temperature");
 var mass = document.getElementById("mass");
+var planet = document.getElementById("planet");
 var length = document.getElementById("length");
 var currency = document.getElementById("currency");
 
@@ -11,6 +12,7 @@ var currency = document.getElementById("currency");
 var baseResult = base.querySelectorAll("output")[0];
 var temperatureResult = temperature.querySelectorAll("output")[0];
 var massResult = mass.querySelectorAll("output")[0];
+var planetResult = planet.querySelectorAll("output")[0];
 var lengthResult = length.querySelectorAll("output")[0];
 var currencyResult = currency.querySelectorAll("output")[0];
 
@@ -19,6 +21,8 @@ var currencyResult = currency.querySelectorAll("output")[0];
 temperature.getElementsByClassName("convert")[0].addEventListener("click", () => { handleTemperature() });
 length.getElementsByClassName("convert")[0].addEventListener("click", () => { handleLength() });
 base.getElementsByClassName("convert")[0].addEventListener("click", () => { handleBase() });
+mass.getElementsByClassName("convert")[0].addEventListener("click", () => { handleMass() });
+planet.getElementsByClassName("convert")[0].addEventListener("click", () => { handlePlanet() });
 
 
 
@@ -81,7 +85,7 @@ function handleBase() {
     var dec;
     
     if ((baseFrom === "-- select unit --") || (baseTo === "-- select unit --")) {
-        baseResult.innerHTML = "Please select units and try again."
+        baseResult.innerHTML = "Please select bases and try again."
     }
     else if (baseFrom === baseTo) {
         baseResult.innerHTML = input;
@@ -94,5 +98,42 @@ function handleBase() {
     }
 }
 
+function handleMass() {
+    var unitFrom = length.querySelectorAll(".dropdown")[0].value;
+    var unitTo = length.querySelectorAll(".dropdown")[1].value;
+    var input = length.querySelectorAll("input")[0].value;
+
+}
+
+function handlePlanet() {
+    var unitFrom = planet.querySelectorAll(".dropdown")[0].value;
+    var planetTo = planet.querySelectorAll(".dropdown")[1].value;
+    var input = planet.querySelectorAll("input")[0].value;
+
+    var conversionFormulas = {
+        "Mercury": input * 0.38,
+        "Venus": input * 0.91,
+        "Earth": input,
+        "Mars": input * 0.38,
+        "Jupiter": input * 2.53,
+        "Saturn": input * 1.07,
+        "Uranus": input * 0.89,
+        "Neptune": input * 1.14
+    }
+    if ((unitFrom === "") || (planetTo === "-- select planet --")) {
+        planetResult.innerHTML = "Please select and try again.";
+    }
+    else {
+        if (conversionFormulas[planetTo] === 1) {
+            planetResult.innerHTML = ((Math.round((conversionFormulas[planetTo]) * 1000000) / 1000000), unitFrom);
+            
+        }
+        else {
+            planetResult.innerHTML = ((Math.round((conversionFormulas[planetTo]) * 1000000) / 1000000)+" "+unitFrom + "s");
+        }
+        
+    }
+
+}
 
 
