@@ -99,10 +99,28 @@ function handleBase() {
 }
 
 function handleMass() {
-    var unitFrom = length.querySelectorAll(".dropdown")[0].value;
-    var unitTo = length.querySelectorAll(".dropdown")[1].value;
-    var input = length.querySelectorAll("input")[0].value;
+    var unitFrom = mass.querySelectorAll(".dropdown")[0].value;
+    var unitTo = mass.querySelectorAll(".dropdown")[1].value;
+    var input = mass.querySelectorAll("input")[0].value;
+    var conversionFormulas = {
+        "gram-gram": input, "gram-kilogram": input / 1000, "gram-pound": input / 453.6, "gram-milligram": input * 1000, "gram-ounce": input / 28.35, "gram-stone": input / 6350, "gram-tonne": input / 1000000, "gram-UK Ton": input / 1016046.91, "gram-US Ton": input / 907185,
+        "kilogram-gram": input * 1000, "kilogram-kilogram": input, "kilogram-pound": input * 2.20462, "kilogram-milligram": input * 1000000, "kilogram-ounce": input * 35.274, "kilogram-stone": input / 6.35, "kilogram-tonne": input / 1000, "kilogram-UK Ton": input / 1016, "kilogram-US Ton": input / 907.2,
+        "pound-gram": input * 453.592, "pound-kilogram": input * 0.453592, "pound-pound": input, "pound-milligram": input * 453592, "pound-ounce": input * 16, "pound-stone": input / 14, "pound-tonne": input * 0.000453592, "pound-UK Ton": input / 2240, "pound-US Ton": input / 2000,
+        "milligram-gram": input / 1000, "milligram-kilogram": input / 1000000, "milligram-pound": input / 453600, "milligram-milligram": input, "milligram-ounce": input / 28350, "milligram-stone": input / 6350293.18, "milligram-tonne": input * 0.000000001, "milligram-UK Ton": input * 0.00000000098, "milligram-US Ton": input / 907184740,
+        "ounce-gram": input * 28.3495, "ounce-kilogram": input / 35.274, "ounce-pound": input / 16, "ounce-milligram": input * 28349.5, "ounce-ounce": input, "ounce-stone": input / 224, "ounce-tonne": input / 35270, "ounce-UK Ton": input / 35840, "ounce-US Ton": input / 32000,
+        "stone-gram": input * 6350.29, "stone-kilogram": input * 6.35, "stone-pound": input * 14, "stone-milligram": input * 6350293.18, "stone-ounce": input * 224, "stone-stone": input, "stone-tonne": input / 157.5, "stone-UK Ton": input / 160, "stone-US Ton": input / 142.9,
+        "tonne-gram": input * 1000000, "tonne-kilogram": input * 1000, "tonne-pound": input * 2204.62, "tonne-milligram": input * 1000000000, "tonne-ounce": input * 35274, "tonne-stone": input * 157.473, "tonne-tonne": input, "tonne-UK Ton": input / 1.016, "tonne-US Ton": input * 1.102,
+        "UK Ton-gram": input *  1016046.91, "UK Ton-kilogram": input * 1016.05, "UK Ton-pound": input * 2240, "UK Ton-milligram": input * 1016046909, "UK Ton-ounce": input * 35840, "UK Ton-stone": input * 160, "UK Ton-tonne": input * 1.016, "UK Ton-UK Ton": input, "UK Ton-US Ton": input * 1.12,
+        "US Ton-gram": input * 907185, "US Ton-kilogram": input * 907.185, "US Ton-pound": input * 2000, "US Ton-milligram": input * 907185003.0836, "US Ton-ounce": input * 32000, "US Ton-stone": input * 142.857, "US Ton-tonne": input * 1.102, "US Ton-UK Ton": input / 1.12, "US Ton-US Ton": input
+    }
 
+    if ((unitFrom === "-- select unit --") || (unitTo === "-- select unit --")) {
+        massResult.innerHTML = "Please select units and try again.";
+    }
+    else {
+        conversion = unitFrom + "-" + unitTo;
+        massResult.innerHTML = Math.round((conversionFormulas[conversion]) * 1000000) / 1000000;
+    }
 }
 
 function handlePlanet() {
@@ -124,7 +142,7 @@ function handlePlanet() {
         planetResult.innerHTML = "Please select and try again.";
     }
     else {
-        if (conversionFormulas[planetTo] === 1) {
+        if ((conversionFormulas[planetTo] === 1) || (unitFrom === "stone")) {
             planetResult.innerHTML = ((Math.round((conversionFormulas[planetTo]) * 1000000) / 1000000), unitFrom);
             
         }
