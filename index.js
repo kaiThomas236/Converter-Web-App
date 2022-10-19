@@ -23,7 +23,7 @@ length.getElementsByClassName("convert")[0].addEventListener("click", () => { ha
 base.getElementsByClassName("convert")[0].addEventListener("click", () => { handleBase() });
 mass.getElementsByClassName("convert")[0].addEventListener("click", () => { handleMass() });
 planet.getElementsByClassName("convert")[0].addEventListener("click", () => { handlePlanet() });
-
+currency.getElementsByClassName("convert")[0].addEventListener("click", () => { handleCurrency() });
 
 
 
@@ -149,8 +149,43 @@ function handlePlanet() {
         else {
             planetResult.innerHTML = ((Math.round((conversionFormulas[planetTo]) * 1000000) / 1000000)+" "+unitFrom + "s");
         }
-        
     }
+}
+
+
+function handleCurrency() {
+    var currFrom = currency.querySelectorAll("input")[0].value;
+    var currTo = currency.querySelectorAll("input")[1].value;
+    var input = currency.querySelectorAll("input")[2].value;
+    var nesting = currTo.toUpperCase();
+
+
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'da3a368d98msh7f1ead6e626c098p1ff00fjsn31a3775ff867',
+            'X-RapidAPI-Host': 'currency-converter5.p.rapidapi.com'
+        }
+    };
+
+    
+    async function getApi() {
+        return fetch('https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=' + currFrom + '&to=' + currTo + '&amount=' + input +"&format=json", options)
+            .then(response => response.json())
+            .then(async (data) => {
+                currencyResult.innerHTML = Math.round((data.rates[nesting].rate_for_amount) * 100) / 100;
+                
+            })
+            
+    };
+    
+    getApi();
+    
+    
+    
+    
+
 
 }
 
