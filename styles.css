@@ -109,10 +109,6 @@ footer {
     border-radius: 10px; /* by setting the border radius before the a is active or hovered it prevents a flash of square highlighting from appearing */
 }
 
-.navbar-brand {
-    padding-right: 10%;
-}
-
 .navbar li>a:hover,
 .navbar li>a:focus,
 .navbar li>a.active {
