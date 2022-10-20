@@ -159,8 +159,6 @@ function handleCurrency() {
     var input = currency.querySelectorAll("input")[2].value;
     var nesting = currTo.toUpperCase();
 
-
-
     const options = {
         method: 'GET',
         headers: {
@@ -169,24 +167,15 @@ function handleCurrency() {
         }
     };
 
-    
     async function getApi() {
         return fetch('https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=' + currFrom + '&to=' + currTo + '&amount=' + input +"&format=json", options)
             .then(response => response.json())
             .then(async (data) => {
                 currencyResult.innerHTML = Math.round((data.rates[nesting].rate_for_amount) * 100) / 100;
                 
-            })
-            
+            })  
     };
-    
     getApi();
-    
-    
-    
-    
-
-
 }
 
 
